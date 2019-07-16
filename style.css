@@ -105,26 +105,42 @@ a:hover{
 }
 
 #main_exp{
-    display: grid;
-    grid-template-columns: auto  20px auto;
+
     font-family: 'Rokkitt', serif;
     font-size: 1.2em;
     font-weight: 300;
 }
 
-#main_exp .left{
+#main_exp .tile{
+    display: grid;
+    grid-template-columns: 28%  20px auto;
+    border: 1px solid #D5C5C5;
+    border-radius: 7px;
+    box-shadow: 1px 2px 2px grey;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* height: 200px; */
+    /* display: inherit; */
+    margin-bottom: 8px;
+}
+#main_exp .tile:hover{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#main_exp .tile .left{
     text-align: right;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-#main_exp .center{
+#main_exp .tile .center{
     grid-column-start: 2;
     grid-column-end: 3;
     text-align: center;
 }
 
-#main_exp .right{
+#main_exp .tile .right{
     text-align: left;
     grid-column-start: 3;
     grid-column-end: 4;
@@ -136,6 +152,13 @@ a:hover{
     font-family: 'Rokkitt', serif;
     font-size: 1.2em;
     font-weight: 300;
+    margin-top: -50px;
+}
+
+#main_edu .sprtr{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #main_edu .left{
@@ -159,7 +182,7 @@ a:hover{
     display: block;
     grid-column-start: 1;
     grid-column-end: 4;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 
 #main_sklset{
@@ -214,7 +237,10 @@ a:hover{
     width: auto;
     height: 200px;
     /* margin-top: -55px; */
-    posi
+}
+
+img:hover{
+    cursor: pointer;
 }
 
 #pic{
@@ -297,7 +323,7 @@ footer p{
 	-webkit-animation: Gradient 15s ease infinite;
 	-moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
-    overflow-y:hidden;
+    /* overflow-y:hidden; */
 }
 
 @-webkit-keyframes Gradient {
