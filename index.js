@@ -26,7 +26,7 @@ function onClick(id){
     document.getElementById('main_pic').style.display = "none";
     var id1 = 'main_' + id;
     document.getElementById(id1).style.display = 'grid';
-    document.getElementById(id).classList.add("active");
+    id != "pic" ? document.getElementById(id).classList.add("active") : "";
 /*     document.getElementById(id).style.background = 'transparent';
     document.getElementById(id).style.color = 'black';
     document.getElementById(id).style.border = '2px solid black'; */
