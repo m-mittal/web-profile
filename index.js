@@ -23,3 +23,14 @@ function scrll2Bttm(){
     console.log("---------------------------   " , element[0])
     window.scrollTo(0, element[0].scrollHeight);
 }
+
+function onResize(){
+    var x = window.document.body.clientWidth;
+    var y = window.document.body.clientHeight;
+    var elem = document.getElementById("fallbackui");
+    if(x < 1200 || y < 580){
+        elem.style.display = "block";
+    }else{
+        elem.style.display = "none";
+    }
+}

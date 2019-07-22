@@ -184,6 +184,10 @@ a:hover{
     text-align: center;
 }
 
+#main_exp .tile .cntnt ul{
+    margin-left: -80px;
+}
+
 #main_exp .tile .cntnt:hover{
     height: auto;
     overflow: hidden;
@@ -381,6 +385,7 @@ footer p{
 
 
   body {
+      min-width: 100%;;
 	width: 100wh;
 	height: 90vh;
 	color: #000000;
@@ -427,4 +432,25 @@ footer p{
 	100% {
 		background-position: 0% 50%
 	}
+}
+
+#fallbackui{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+}
+
+#fallbackui h2{
+    text-align: center;
+}
+
+#fallbackui h4{
+    text-align: center;
 }

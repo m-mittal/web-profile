@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>Mohit Mittal</title>
     <script src="./index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
+<body onresize="myFunction()">
     <div id="nav" class="nav">
         <div><span id="abtMe" class="button" onclick="onClick('abtMe')">About Me</span></div>
         <div><span id="exp" class="button" onclick="onClick('exp')">My Experience</span></div>
@@ -91,7 +92,7 @@
             </div>
 
             <div class="tile">
-                <div class="drtn"><span>Mar. 2018 to</span><br>
+                <div class="drtn"><span>Mar. 2019 to</span><br>
                     <span>Jul. 2019</span></div>
                 <div class="cmpny"><img src="./hsbc-logo-59-50.png" /></div>
                 <div class="cntnt">
@@ -117,7 +118,7 @@
 
             <div class="tile">
                 <div class="drtn"><span>May 2017 to</span><br>
-                <span>June 2018</span>
+                    <span>June 2018</span>
                 </div>
                 <div class="cmpny"><img src="./tcs-logo-110-51.png" /></div>
                 <div class="cntnt">
@@ -322,12 +323,26 @@
             <p><a href="./Resume.pdf" target="_blank">Download CV</a> &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
                 Copy Right © By Mohit Mittal | All Rights Reserved.</p>
         </footer>
+
+        <div id="fallbackui">
+            <h2>Alert !!!</h2><br>
+            <h4>Window Size must be greater than 1200 * 580 pixels.</h4>
+        </div>
+
         <script>
             !function () {
                 document.getElementById('main_abtMe').style.display = "none";
                 document.getElementById('main_exp').style.display = "none";
                 document.getElementById('main_sklset').style.display = "none";
                 document.getElementById('main_edu').style.display = "none";
+                var x = window.document.body.clientWidth;
+                var y = window.document.body.clientHeight;
+                var elem = document.getElementById("fallbackui");
+                if (x < 1200 || y < 580) {
+                    elem.style.display = "block";
+                } else {
+                    elem.style.display = "none";
+                }
             }();
         </script>
 </body>
