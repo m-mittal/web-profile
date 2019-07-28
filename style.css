@@ -40,8 +40,9 @@ a:hover{
 .active{
     background: white;
     color: black;
-    border: 2px solid black;
+    border: 2px solid black !important;
     box-shadow: 0 0 8px 3px #2517175c inset;
+    
 }
 
 .active:hover{
@@ -455,4 +456,13 @@ footer p{
 
 #fallbackui h4{
     text-align: center;
+}
+
+span:focus{
+    outline: none;
+}
+
+#pic img:focus{
+    border: 3px solid lightblue;
+    outline: none;
 }

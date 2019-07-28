@@ -14,11 +14,11 @@
 
 <body onresize="onResize()">
     <div id="nav" class="nav">
-        <div><span id="abtMe" class="button" onclick="onClick('abtMe')">About Me</span></div>
-        <div><span id="exp" class="button" onclick="onClick('exp')">My Experience</span></div>
-        <div><span id="sklset" class="button" onclick="onClick('sklset')">My Skillset</span></div>
-        <div><span id="edu" class="button" onclick="onClick('edu')">My Qualification</span></div>
-        <div id="pic" onclick="onClick('pic')"><img src="./img1.jpeg" /></div>
+        <div><span tabindex="2" id="abtMe" class="button" onclick="onClick('abtMe')" onfocus="onClick('abtMe')">About Me</span></div>
+        <div><span tabindex="3" id="exp" class="button" onclick="onClick('exp')" onfocus="onClick('exp')">My Experience</span></div>
+        <div><span tabindex="4" id="sklset" class="button" onclick="onClick('sklset')" onfocus="onClick('sklset')">My Skillset</span></div>
+        <div><span tabindex="5" id="edu" class="button" onclick="onClick('edu')" onfocus="onClick('edu')">My Qualification</span></div>
+        <div id="pic" onclick="onClick('pic')"><img tabindex="1" src="./img1.jpeg" /></div>
     </div>
     <div id="main" class="main">
         <div id="main_pic">
@@ -285,7 +285,7 @@
             <br>
         </div>
         <div id="main_edu">
-            <span class="left">B.E.(Computer Science and Engineering)</span>
+            <span class="left">B.E.<span style="font-size: 0.7em;">(Computer Science and Engineering)</span></span>
             <span class="right">SVITS, Indore</span>
             <span class="left">2011 - 2015</span>
             <span class="right">CGPA 7.75</span>
@@ -331,6 +331,9 @@
 
         <script>
             !function () {
+                /* document.getElementById('pic').focus(); */
+                document.getElementById("pic").childNodes[0].focus();
+
                 document.getElementById('main_abtMe').style.display = "none";
                 document.getElementById('main_exp').style.display = "none";
                 document.getElementById('main_sklset').style.display = "none";
