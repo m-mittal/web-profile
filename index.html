@@ -14,10 +14,14 @@
 
 <body onresize="onResize()">
     <div id="nav" class="nav">
-        <div><span tabindex="2" id="abtMe" class="button" onclick="onClick('abtMe')" onfocus="onClick('abtMe')">About Me</span></div>
-        <div><span tabindex="3" id="exp" class="button" onclick="onClick('exp')" onfocus="onClick('exp')">My Experience</span></div>
-        <div><span tabindex="4" id="sklset" class="button" onclick="onClick('sklset')" onfocus="onClick('sklset')">My Skillset</span></div>
-        <div><span tabindex="5" id="edu" class="button" onclick="onClick('edu')" onfocus="onClick('edu')">My Qualification</span></div>
+        <div><span tabindex="2" id="abtMe" class="button" onclick="onClick('abtMe')" onfocus="onClick('abtMe')">About
+                Me</span></div>
+        <div><span tabindex="3" id="exp" class="button" onclick="onClick('exp')" onfocus="onClick('exp')">My
+                Experience</span></div>
+        <div><span tabindex="4" id="sklset" class="button" onclick="onClick('sklset')" onfocus="onClick('sklset')">My
+                Skillset</span></div>
+        <div><span tabindex="5" id="edu" class="button" onclick="onClick('edu')" onfocus="onClick('edu')">My
+                Qualification</span></div>
         <div id="pic" onclick="onClick('pic')"><img tabindex="1" src="./img1.jpeg" /></div>
     </div>
     <div id="main" class="main">
@@ -56,8 +60,8 @@
                 <span class="right">27 years</span>
                 <span class="left">Connect with me</span>
                 <span class="center">:</span>
-                <span class="right"><a href="https://in.linkedin.com/in/mohit-mittal-47622711a?trk=profile-badge"><img src="./icons/linkedin_35.png" /></a> &nbsp;&nbsp;<img
-                        src="./icons/fb_35.png" /></span>
+                <span class="right"><a href="https://in.linkedin.com/in/mohit-mittal-47622711a?trk=profile-badge"><img
+                            src="./icons/linkedin_35.png" /></a> &nbsp;&nbsp;<img src="./icons/fb_35.png" /></span>
             </section>
         </div>
         <div id="main_exp">
@@ -304,7 +308,8 @@
                     <li>HSDI : Provided training on React.js. </li>
                     <li>HSDI : Helped team adopt Agile and follow processes in Teller Services Team.</li>
                     <li>HSDI : Involved in UI Code review process.</li>
-                    <li>HSDI : Provided training on efficient and effective utilization of CI/CD tools – Git and Jenkins.
+                    <li>HSDI : Provided training on efficient and effective utilization of CI/CD tools – Git and
+                        Jenkins.
                     </li>
                     <li>TCS : Developed a POC and web based chatbot and succesfully demonstrated to top leadership in
                         Vanguard. </li>
@@ -338,6 +343,9 @@
                 document.getElementById('main_exp').style.display = "none";
                 document.getElementById('main_sklset').style.display = "none";
                 document.getElementById('main_edu').style.display = "none";
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    window.location.replace("https://m-mittal.github.io/mob-profile/");
+                }
                 var x = window.document.body.clientWidth;
                 var y = window.document.body.clientHeight;
                 var elem = document.getElementById("fallbackui");

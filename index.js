@@ -1,4 +1,4 @@
-function onClick(id){
+function onClick(id) {
     document.getElementById('main_abtMe').style.display = "none";
     document.getElementById('abtMe').classList.remove("active");
     document.getElementById('main_exp').style.display = "none";
@@ -13,24 +13,27 @@ function onClick(id){
     id != "pic" ? document.getElementById(id).classList.add("active") : "";
 }
 
-function scrll2Bttm(){
-/*     setTimeout(() => {
-        var element = document.getElementsByTagName("BODY");
-        console.log("---------------------------   " , element[0])
-        element.scrollTop = element[0].scrollHeight;    
-    }, 3000); */
+function scrll2Bttm() {
+    /*     setTimeout(() => {
+            var element = document.getElementsByTagName("BODY");
+            console.log("---------------------------   " , element[0])
+            element.scrollTop = element[0].scrollHeight;    
+        }, 3000); */
     var element = document.getElementsByTagName("BODY");
-    console.log("---------------------------   " , element[0])
+    console.log("---------------------------   ", element[0])
     window.scrollTo(0, element[0].scrollHeight);
 }
 
-function onResize(){
+function onResize() {
     var x = window.document.body.clientWidth;
     var y = window.document.body.clientHeight;
     var elem = document.getElementById("fallbackui");
-    if(x < 1200 || y < 580){
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.location.replace("https://m-mittal.github.io/mob-profile/");
+    }
+    if (x < 1200 || y < 580) {
         elem.style.display = "block";
-    }else{
+    } else {
         elem.style.display = "none";
     }
 }
