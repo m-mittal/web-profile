@@ -344,15 +344,19 @@
                 document.getElementById('main_sklset').style.display = "none";
                 document.getElementById('main_edu').style.display = "none";
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    document.body.innerText = "Redirecting...";
+                    document.body.style.textAlign = "center";
+                    document.body.style.paddingTop = "100px";
                     window.location.replace("https://m-mittal.github.io/mob-profile/");
-                }
-                var x = window.document.body.clientWidth;
-                var y = window.document.body.clientHeight;
-                var elem = document.getElementById("fallbackui");
-                if (x < 1200 || y < 580) {
-                    elem.style.display = "block";
-                } else {
-                    elem.style.display = "none";
+                }else{
+                    var x = window.document.body.clientWidth;
+                    var y = window.document.body.clientHeight;
+                    var elem = document.getElementById("fallbackui");
+                    if (x < 1200 || y < 580) {
+                        elem.style.display = "block";
+                    } else {
+                        elem.style.display = "none";
+                    }
                 }
             }();
         </script>
