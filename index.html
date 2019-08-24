@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Concert+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -325,9 +328,40 @@
 
         </div>
         <footer>
-            <p><a href="./Resume.pdf" target="_blank">Download CV</a> &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
+            <p><a onclick="showPopup()">Download CV</a> &nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;
                 Copy Right © By Mohit Mittal | All Rights Reserved.</p>
         </footer>
+
+        <div id="loginpopup">
+            <div id="bckgrnd" onclick="hidePopup()"></div>
+            <div id="popup">
+                <p>Hi Mohit,</p><br>
+                <p>My name is&nbsp;&nbsp;</p>
+                <p id="inptName" onfocus="onFocussed('inptName')" onfocusout="onFocusOut('inptName')" onkeydown="onKeyPress(event , 'inptName')" tabindex="0" >
+                    <span class="def" id="inptName-0">&nbsp;&nbsp;</span>
+                </p><br>
+                <p>and i work in&nbsp;&nbsp;</p>
+                <p id="inpCompny" onfocus="onFocussed('inpCompny')" onfocusout="onFocusOut('inpCompny')" onkeydown="onKeyPress(event , 'inpCompny')" tabindex="0" >
+                    <span class="def" id="inpCompny-0">&nbsp;&nbsp;</span>
+                </p><br>
+
+                <p>You can email me at </p> <br>
+                <p id="inpEml1" onfocus="onFocussed('inpEml1')" onfocusout="onFocusOut('inpEml1')" onkeydown="onKeyPress(event , 'inpEml1')" tabindex="0" >
+                        <span class="def" id="inpEml1-0">&nbsp;&nbsp;</span>
+                </p>
+                <span>@</span>
+                <p id="inpEml2" onfocus="onFocussed('inpEml2')" onfocusout="onFocusOut('inpEml2')" onkeydown="onKeyPress(event , 'inpEml2')" tabindex="0" >
+                        <span class="def" id="inpEml2-0">&nbsp;&nbsp;</span>
+                </p><br>
+
+                <p>or call me at&nbsp;&nbsp;</p>
+                <p id="inpMob" onfocus="onFocussed('inpMob')" onfocusout="onFocusOut('inpMob')" onkeydown="onKeyPress(event , 'inpMob')" tabindex="0" >
+                        <span class="def" id="inpMob-0">&nbsp;&nbsp;</span>
+                </p><br><br><br>
+
+                <a id="dwnldCv" onfocus="checkDwnd('inpMob')" href="#" download onclick="dwnldNhidePopup()">Download CV</a>                    
+            </div>
+        </div>
 
         <div id="fallbackui">
             <h2>Alert !!!</h2><br>
