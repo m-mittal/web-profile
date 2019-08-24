@@ -42,6 +42,7 @@ function hidePopup(){
 
 function dwnldNhidePopup(){
     if(document.getElementById("dwnldCv").href.indexOf("/Resume.pdf") > -1 ){
+        saveData();
         document.getElementById("loginpopup").style.display = "none";
     }
 }
@@ -297,3 +298,16 @@ function animatePos(id){
     },
     250)
 }
+
+function saveData() {
+    var data = {
+        timestamp: new Date(),
+        name: inptFormVals["inptName"],
+        company : inptFormVals["inpCompny"],
+        email : inptFormVals["inpEml1"] + "@" + inptFormVals["inpEml2"],
+        mobile : inptFormVals["inpMob"]
+    };
+    Sheetsu.write("//sheetsu.com/a/t/b065254cd632", data, {}, function (result) {
+      console.log(result);
+    });
+  }
