@@ -41,7 +41,7 @@ function hidePopup(){
 }
 
 function dwnldNhidePopup(){
-    if(document.getElementById("dwnldCv").href.indexOf("/Resume.pdf") ){
+    if(document.getElementById("dwnldCv").href.indexOf("/Resume.pdf") > -1 ){
         document.getElementById("loginpopup").style.display = "none";
     }
 }
@@ -136,6 +136,12 @@ function validateValues(id){
             }
         }
     }
+
+    if( inptFormVals["inpCompny-valid"] == true && inptFormVals["inpEml-valid"] == true && inptFormVals["inpMob-valid"] == true && inptFormVals["inptName-valid"] == true ){
+        document.getElementById("dwnldCv").setAttribute("href", "./Resume.pdf");
+    }else{
+        document.getElementById("dwnldCv").removeAttribute('href');
+    }
 }
 
 /* 
@@ -151,15 +157,6 @@ inpMob-valid: true
 inptName: "n"
 inptName-valid: false */
 
-function checkDwnd(){
-    if( inptFormVals["inpCompny-valid"] == true && inptFormVals["inpEml-valid"] == true && inptFormVals["inpMob-valid"] == true && inptFormVals["inptName-valid"] == true ){
-        document.getElementById("dwnldCv").href = "./Resume.pdf";
-        document.getElementById("dwnldCv").target = "_blank";
-    }else{
-        document.getElementById("dwnldCv").href = "#";
-        document.getElementById("dwnldCv").target = "";
-    }
-}
 
 function onFocussed(id){
     selectedElemId = id;
