@@ -307,7 +307,6 @@ function saveData() {
         email : inptFormVals["inpEml1"] + "@" + inptFormVals["inpEml2"],
         mobile : inptFormVals["inpMob"]
     };
-    Sheetsu.write("//sheetsu.com/a/t/b065254cd632", data, {}, function (result) {
-      console.log(result);
-    });
+    Sheetsu.write("https://sheetsu.com/apis/v1.0bu/b065254cd632/", data, {})
+  .then(function(x) {console.log(x);}, function(e) {console.log(e)});
   }
